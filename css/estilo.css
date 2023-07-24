@@ -11,3 +11,4 @@
 .w-500{
     width: 500px;
 }
+.social i:hover{color:#0d6efd; transform:scale(1.5); transform: rotate(20deg);}
