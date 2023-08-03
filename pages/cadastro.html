@@ -73,7 +73,7 @@
             <section class="row mb-2">
                 <div class="col-md-12">
                     <label for="confirmar" class="mb-2">Confirmação de Email</label>
-                    <input type="text" id="confirmar" name="confirmar" class="form-control bg-secondary" disabled>
+                    <input type="text" id="confirmar" name="confirmar" class="form-control bg-secondary-subtle" disabled>
                 </div>
             </section>
 
@@ -81,17 +81,17 @@
             
             <section class="row mb-2 mt-3">
                 <div class="col-md-12 input-group">
-                    <label for="senha" class="input-group-text col-form-label">Senha</label>
-                    <input type="password" id="senha" name="senha" class="form-control">
-                    <i class="fa-solid fa-eye btn btn-info fs-4"></i>
+                    <label for="senha" class="input-group-text col-form-label bg-success-subtle">Senha</label>
+                    <input type="password" id="senha" name="senha" class="form-control bg-success-subtle">
+                    <i class="fa-solid fa-eye btn fs-5 pt-2 bg-success-subtle border-0"></i>
                 </div>
             </section>
 
             <!-- CAMPO RADIO -->
 
-            <section class="row mb-2">
+            <section class="row mb-2 ps-3">
 
-                <label class="col-form-label-lg">Qual seu nível de escolaridade?</label>
+              <label class="col-form-label-lg">Qual seu nível de escolaridade?</label>
                 <div class="form-check">
                     <input type="radio" id="fundamental" name="escolaridade" value="fundamental" class="form-check-input">   
                     <label for="fundamental" class="form-check-label">Fundamental</label>               
@@ -108,10 +108,82 @@
                 </div>
 
             </section>
+
+            <div class="col-md-6 mx-auto mb-2">
+              <button class="btn btn-primary col-12">Verificar Escolaridade</button>
+            </div>
+
+            <!-- CAMPO SWITCH: TERMOS DE CONTRATO -->
+            <div class="alert alert-warning mt-2">
+              <p class="m-0 py-2">Você aceita os termos do contrato?</p>
+            </div>
+
+            <section class="form-check form-switch">
+              <input type="checkbox" name="escolha" id="escolha" value="escolha" class="form-check-input">
+              <label for="escolha" class="form-check-label">Exibir termos de contrato</label>
+            </section>
+
+            <!-- INFO DE CONTRATO -->
+            <section class="p-5 mt-3" id="contrato">
+              <div class="container-fluid">
+                <h1>Termos do Contrato</h1>
+                <p class="lead altura">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, tenetur quos. At quaerat nesciunt ipsam commodi, modi itaque maiores quia ad nisi, iusto sed cupiditate doloribus, illo molestiae quo neque!
+                  Nulla alias itaque qui quia nesciunt eligendi soluta esse error impedit, magnam blanditiis, quibusdam possimus nobis expedita minus vitae officiis quod voluptatum quas at a. Eligendi dolore deleniti earum a.
+                  Et quisquam libero perspiciatis vel esse eligendi voluptate animi, placeat atque, iste modi dicta. Nihil rem aliquam, ducimus quasi architecto adipisci quis voluptas. Obcaecati consectetur sit reiciendis aspernatur corporis non!
+                  Harum dolorem, est perspiciatis mollitia qui, corrupti quo alias, suscipit dolores facilis assumenda numquam magnam possimus earum quas doloremque temporibus dolor provident! Quis soluta fuga distinctio, culpa obcaecati consectetur iste?
+                  Beatae aliquam vel incidunt corrupti et itaque enim neque ipsum. Accusantium dolor nam distinctio, molestiae molestias consequatur quas necessitatibus debitis aut voluptas, suscipit exercitationem ex vitae hic est qui doloribus?
+                  Aspernatur adipisci harum, ratione cumque atque ut nam voluptatum quam dicta. Exercitationem sed ea, labore obcaecati ut molestiae eius nam vero maiores vel sunt consectetur, repellendus commodi nobis hic ex.
+                  Dignissimos, ipsum. Cupiditate corporis architecto, sed molestias perspiciatis ipsam dignissimos nemo? Suscipit expedita, vitae aliquam quam natus iste aperiam cupiditate possimus reprehenderit quis, adipisci soluta commodi, perferendis deleniti fugit quidem.
+                  Suscipit vero, mollitia corporis accusamus incidunt aliquam ipsa consequuntur ab laudantium totam aliquid tenetur unde quas sed, quisquam, esse enim facere fugiat? Sit, incidunt optio tenetur illo recusandae consequuntur exercitationem.
+                  Deleniti, voluptate reiciendis saepe dolore voluptates ex perferendis laboriosam quis asperiores repellat maxime minima autem harum doloribus nisi dignissimos! Voluptate praesentium obcaecati iure quibusdam debitis natus est dolor quam corrupti!
+                  Nulla consequuntur natus molestias reiciendis cumque amet! Qui sint deleniti voluptas explicabo delectus dolor dignissimos consequatur, quibusdam nihil tempora quasi libero? Magnam nisi eaque, dolorum necessitatibus voluptate corrupti quae nulla.
+                </p>
+
+                <hr>
+
+                <div class="form-check">
+                  <input type="checkbox" name="concordo" id="concordo" value="concordo" class="form-check-input">
+                  <label for="concordo" class="form-check-label">Concordo</label>
+                </div>
+                
+              </div>
+            </section>
+
+            <!-- CAMPO SELECT -->
+
+            <section class="row mb-2">
+              <label class="col-form-label-lg">Em qual setor gostar de trabalhar?</label>
+              <select name="trabalho" class="form-select">
+                <option value="">Escolhe uma opção...</option>
+                <option value="RH">RH</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="fiananceiro">Fiananceiro</option>
+              </select>
+            </section>
+            
+            <!-- CAMPO TEXTAREA: COMENTÁRIO -->
+            <section class="row mb-2"> 
+              <div class="col-md-12">
+                <label for="mensagem" class="mb-2">Comente sobre o setor escolhido</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Descreva brevemente sua opinião" class="form-control"></textarea>
+              </div>
+            </section>
+
+            <!-- CAMPO DE COR -->
+
+            <section class="row mb-2">
+              <label for="cor" class="col-md-3">Escolha uma para o site</label>
+              <input type="color" name="cor" id="cor" class="col-md-9 p-0">
+            </section>
+
+            <div class="col-md-6 mx-auto my-5">
+            <button type="submit" class="btn btn-primary col-12">Enviar Formulário</button>
+            </div>
         </form>
     </main>
 
-    <footer class="container-footer bg-dark text-white py-3">
+    <footer class="container-fluid bg-dark text-white py-3">
       <section class="row">
 
         <div class="col-md-9">
