@@ -34,13 +34,17 @@ idade.addEventListener("blur", function(){
 let endereco = document.querySelector("input[name=endereco]")
 endereco.addEventListener("blur", function(){
     console.log(endereco.value.length)
-    if(endereco.value.length >= 35){
-        alert("Seu endereço ultrapassou o limite do campo!")
-        endereco.style.border = "2px solid red"
-    }
-    else{
-        alert("OK")
-        endereco.style.border = "2px solid yellow"
+
+    if(endereco.value != ""){
+        if(endereco.value.length >= 35){
+            alert("Seu endereço ultrapassou o limite do campo!")
+            endereco.style.border = "2px solid red"
+        }
+        
+        else{
+            alert("OK")
+            endereco.style.border = "2px solid yellow"
+        }
     }
 });
 
@@ -155,5 +159,32 @@ trabalho.addEventListener("change", ()=>{
             }
             
         }
+    }
+})
+
+let cor = document.querySelector("#cor")
+cor.addEventListener("change", ()=>{
+    console.log(cor.value)
+    document.body.style.backgroundColor = cor.value
+})
+
+let mensagem = document.querySelector("#mensagem")
+let restante = document.querySelector("#restante")
+let limite = 20  
+
+mensagem.addEventListener("keyup", ()=>{
+    // console.log(mensagem.value.length)
+    restante.textContent = mensagem.value.length
+    
+    mensagem.setAttribute("maxlength", limite)
+    console.log(restante.parentNode)
+    
+    if(restante.textContent == 20){
+        mensagem.classList.add("border-danger")
+        restante.parentNode.style.color = "red" //parentNode significa que estamos pegando o elemento (nó da árvore DOM) pai.
+    }
+    else{
+        mensagem.classList.remove("border-danger")
+        restante.parentNode.style.color = "black"
     }
 })
